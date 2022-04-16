@@ -54,7 +54,6 @@ class TestUser:
 
 class TestBot:
     def test_init(self, bot_d):
-        assert bot_d.name == 'username'
         assert isinstance(bot_d.desk, Desk)
 
 

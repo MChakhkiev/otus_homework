@@ -1,5 +1,5 @@
 from random import randint, choice
-
+import os
 
 class Desk:
 
@@ -42,7 +42,7 @@ class Member:
 class Bot(Member):
 
     def __init__(self):
-        name_list = open('botnames.txt', 'r').read().split('\n')
+        name_list = open(os.path.dirname(__file__)+'/botnames.txt', 'r').read().split('\n')
         name = choice(name_list)
         super().__init__(name)
 
