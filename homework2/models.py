@@ -53,18 +53,27 @@ class User(Member):
         super().__init__(name)
 
 
+class Bag:
+
+    def __init__(self):
+        self.numbers = [i for i in range(1, 91)]
+
+    def get_num(self):
+        num = choice(self.numbers)
+        self.numbers.remove(num)
+        return num
+#
+#
 # class Game:
 #
 #     def __init__(self, m: list):
 #         self.members = []
 #         for member in m:
 #             self.members.append(Bot() if member == 'bot' else User(member))
-#         self.numbers = [i for i in range(1, 90)]
+#         self.bag = Bag()
 #
-#     def round(self):
-
-
-
+#     def round_start(self):
+#         self.bag.get_num()
 
 
 if __name__ == '__main__':

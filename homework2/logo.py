@@ -17,14 +17,13 @@ if __name__ == '__main__':
             if len(members) < 2:
                 print('Необходимо как минимум два игрока')
             else:
+                bag = Bag()
                 print('Начинаем игру')
-                numbers = [i for i in range(1, 90)]
                 done = False
                 while True:
                     if done:
                         break
-                    num = choice(numbers)
-                    numbers.remove(num)
+                    num = bag.get_num()
                     print(f'Вытащен номер - {num}')
                     for member in members:
                         print(member.name)
